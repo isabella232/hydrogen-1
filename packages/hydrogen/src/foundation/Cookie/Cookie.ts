@@ -19,7 +19,7 @@ export class Cookie {
 
   constructor(name: string, options: CookieOptions = {}) {
     if (reservedCookieNames.includes(name)) {
-      log.warn(`Warning "${name}" is a reserved cookie name by oxygen!`);
+      log.warn(`Warning "${name}" is a reserved cookie name by Oxygen`);
     }
 
     this.options = options;
