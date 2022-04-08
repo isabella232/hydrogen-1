@@ -36,7 +36,7 @@ The `useSession` hook returns all data within the current session. The return ty
 
 ## Sessions within API routes
 
-API Rotues are the primary spot where you should update session data. API routes are passed a session object for interacting with the session. This session object has the following keys:
+API Routes are the primary spot where you should update session data. API routes are passed a session object for interacting with the session. This session object has the following keys:
 
 | Key       | Description                                                  |
 | --------- | ------------------------------------------------------------ |
