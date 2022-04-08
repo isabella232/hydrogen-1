@@ -222,7 +222,7 @@ export default renderHydrogen(App, {
 
 # Custom session storage
 
-If you wish to persist session data in a custom way, you can write your own session storage adapter. To do so, you need to implement a function that returns an object with An example might look like:
+If you wish to persist session data in a custom way, you can write your own session storage adapter. To do so, you need to implement a function that returns an object. An example might look like:
 
 {% codeblock file, filename: 'customStorage.js' %}
 
