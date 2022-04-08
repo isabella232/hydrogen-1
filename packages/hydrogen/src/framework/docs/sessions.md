@@ -71,7 +71,7 @@ export async function api(request, {session}) {
 
 {% endcodeblock %}
 
-# Configuring hydrogen sessions
+# Configuring Hydrogen sessions
 
 The Hydrogen starter template comes pre-configured with session support. You can adjust the [session cookie configuration](/api/hydrogen/components/framework/route#Cookie%20options) within `App.server.jsx`:
 
