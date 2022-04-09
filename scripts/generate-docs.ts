@@ -106,6 +106,10 @@ async function runHydrogenGenerator(args: Partial<Options> = {}) {
         'Get familiar with the framework components included in Hydrogen.',
       url: '/api/hydrogen/components/framework/index.md',
       entry: [
+        'foundation/Cookie',
+        'foundation/CookieSessionStorage',
+        'foundation/FileSessionStorage',
+        'foundation/MemorySessionStorage',
         'foundation/FileRoutes',
         'foundation/Route',
         'foundation/Router',
@@ -233,6 +237,7 @@ async function runHydrogenGenerator(args: Partial<Options> = {}) {
         'Get familiar with the Shopify-specific commerce hooks included in Hydrogen.',
       url: '/api/hydrogen/hooks/global/index.md',
       entry: [
+        'foundation/useSession',
         'foundation/useServerState',
         'foundation/useShop',
         'foundation/useQuery',

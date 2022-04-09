@@ -2,8 +2,15 @@ import type {SessionStorageAdapter} from '../session/session';
 import {Cookie} from '../Cookie/Cookie';
 import type {CookieOptions} from '../Cookie/Cookie';
 
+/** The `CookieSessionStorage` component is the default session storage
+ * mechanism for Hydrogen.
+*/
 export const CookieSessionStorage = function (
+  /** The name of the cookie stored in the browser. */
   name: string,
+  /** An optional object to configure [how the cookie is persisted in the browser]
+   * (/api/hydrogen/components/framework/cookie#cookie-options). 
+  */
   options: CookieOptions
 ): () => SessionStorageAdapter {
   return function () {

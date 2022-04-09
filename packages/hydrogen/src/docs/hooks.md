@@ -24,6 +24,10 @@ Framework hooks are hooks that are available in the [Hydrogen framework](/custom
     <td><a href="/api/hydrogen/hooks/framework/userouteparams">useRouteParams</a></td>
     <td>Retrieves the parameters of an active route.</td>
   </tr>
+  <tr>
+    <td><a href="/api/hydrogen/hooks/framework/usesession">useSession</a></td>
+    <td>Reads session data in server components.</td>
+  </tr>
 </table>
 
 ## Primitive hooks

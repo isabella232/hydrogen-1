@@ -18,14 +18,34 @@ Framework components are components that are available in the [Hydrogen framewor
     <th>Description</th>
   </tr>
   <tr>
+    <td><a href="/api/hydrogen/components/framework/cookie">Cookie</a></td>
+    <td>Server</td>
+    <td>Helps you build your own custom cookie and session implementations.</td>
+  </tr>
+  <tr>
+    <td><a href="/api/hydrogen/components/framework/cookiesessionstorage">CookieSessionStorage</a></td>
+    <td>Server</td>
+    <td>The default session storage mechanism for Hydrogen.</td>
+  </tr>
+  <tr>
     <td><a href="/api/hydrogen/components/framework/fileroutes">FileRoutes</a></td>
     <td>Server</td>
     <td>Builds a set of default Hydrogen routes based on the output provided by Vite's <code>import.meta.globEager</code> method.</td>
   </tr>
   <tr>
+    <td><a href="/api/hydrogen/components/framework/filesessionstorage">FileSessionStorage</a></td>
+    <td>Server</td>
+    <td>Persists session data to the file system.</td>
+  </tr>
+  <tr>
     <td><a href="/api/hydrogen/components/framework/link">Link</a></td>
     <td>Client</td>
     <td>Used to navigate between routes.</td>
+  </tr>
+  <tr>
+    <td><a href="/api/hydrogen/components/framework/memorysessionstorage">MemorySessionStorage</a></td>
+    <td>Server</td>
+    <td>Stores session data within Hydrogen runtime memory.</td>
   </tr>
   <tr>
     <td><a href="/api/hydrogen/components/framework/route">Route</a></td>

@@ -18,14 +18,34 @@ Framework components and hooks are available as part of the [Hydrogen framework]
     <th>Related hooks</th>
   </tr>
   <tr>
+    <td><a href="/api/hydrogen/components/framework/cookie">Cookie</a></td>
+    <td>Helps you build your own custom cookie and session implementations.</td>
+    <td><a href="/api/hydrogen/hooks/framework/usesession">useSession</a></td>
+  </tr>
+  <tr>
+    <td><a href="/api/hydrogen/components/framework/cookiesessionstorage">CookieSessionStorage</a></td>
+    <td>The default session storage mechanism for Hydrogen.</td>
+    <td><a href="/api/hydrogen/hooks/framework/usesession">useSession</a></td>
+  </tr>
+  <tr>
     <td><a href="/api/hydrogen/components/framework/fileroutes">FileRoutes</a></td>
     <td>Builds a set of default Hydrogen routes based on the output provided by Vite's <code>import.meta.globEager</code> method.</td>
     <td>Not applicable</td>
   </tr>
   <tr>
+    <td><a href="/api/hydrogen/components/framework/filesessionstorage">FileSessionStorage</a></td>
+    <td>Persists session data to the file system.</td>
+    <td><a href="/api/hydrogen/hooks/framework/usesession">useSession</a></td>
+  </tr>
+  <tr>
     <td><a href="/api/hydrogen/components/framework/link">Link</a></td>
     <td>Used to navigate between routes.</td>
     <td><a href="/api/hydrogen/hooks/framework/usenavigate">useNavigate</a></td>
+  </tr>
+  <tr>
+    <td><a href="/api/hydrogen/components/framework/memorysessionstorage">MemorySessionStorage</a></td>
+    <td>Stores session data within Hydrogen runtime memory.</td>
+    <td><a href="/api/hydrogen/hooks/framework/usesession">useSession</a></td>
   </tr>
   <tr>
     <td><a href="/api/hydrogen/components/framework/route">Route</a></td>

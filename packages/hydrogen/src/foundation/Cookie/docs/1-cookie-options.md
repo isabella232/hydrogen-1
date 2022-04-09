@@ -1,0 +1,13 @@
+## Cookie options
+
+The following table describes the options for how the cookie is persisted within the browser. The properties are derived from the [cookie specification](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies):
+
+| Option        | Type                        | Description                                                                                                                                                                                                            |
+| ---------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| expires  | <code>date</code>                      | [A date in which the cookie will expire](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#define_the_lifetime_of_a_cookie). If the date is in the past, then the browser will remove the cookie.                       |
+| maxAge   | <code>number</code>                      | The [number of seconds until the cookie expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#max-agenumber). `maxAge` takes precedence over `expires` if both are defined. |
+| secure | <code>boolean</code>                    | Whether to secure the cookie so that [client JavaScript is unable to read it](https://owasp.org/www-community/HttpOnly).                                                                                                |
+| httpOnly   | <code>boolean</code>                   | Whether to secure the cookie so that the browser only sends it over HTTPS. Some browsers [don't work with secure cookies on localhost](https://owasp.org/www-community/controls/SecureCookieAttribute).                 |
+| sameSite | <code>"lax" &#124; "strict" &#124; "none"</code> | Declares that the cookie should be restricted to a first-party or [same-site](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) context.                                         |
+| path     | <code>string</code>                     | Tells the browser that the cookie should only be sent to the server if it's within the [defined path](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#path_attribute).                                    |
+| domain   | <code>string</code>                     | Secures the cookie so that it's only used on [specific domains](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#domain_attribute).                                                                |
