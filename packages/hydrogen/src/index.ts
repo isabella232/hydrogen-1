@@ -42,4 +42,5 @@ export {
 } from './framework/CachingStrategy';
 
 export {fetchSync} from './foundation/fetchSync/server/fetchSync';
+export {Form} from './foundation/Form/Form.client';
 export {useServerAnalytics} from './foundation/Analytics';

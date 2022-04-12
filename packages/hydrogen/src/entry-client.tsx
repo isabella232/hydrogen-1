@@ -4,6 +4,7 @@ import React, {
   StrictMode,
   Fragment,
   type ElementType,
+  useEffect,
 } from 'react';
 // @ts-expect-error hydrateRoot isn't on the TS types yet, but we're using React 18 so it exists
 import {hydrateRoot} from 'react-dom/client';
@@ -82,14 +83,23 @@ function Content({
     pathname: window.location.pathname,
     search: window.location.search,
   });
+
+  useEffect(() => {
+    setApiResponse(null);
+  }, [serverState]);
+
+  const [apiResponse, setApiResponse] = useState<any>(null);
   const response = useServerResponse(serverState);
 
   return (
     <ServerStateProvider
       serverState={serverState}
       setServerState={setServerState}
+      setApiResponse={setApiResponse}
     >
-      <ClientWrapper>{response.readRoot()}</ClientWrapper>
+      <ClientWrapper>
+        {apiResponse ? apiResponse.readRoot() : response.readRoot()}
+      </ClientWrapper>
     </ServerStateProvider>
   );
 }

@@ -10,3 +10,4 @@ export {useRouteParams} from './foundation/useRouteParams/useRouteParams';
 export {useNavigate} from './foundation/useNavigate/useNavigate';
 export {fetchSync} from './foundation/fetchSync/client/fetchSync';
 export {suspendFunction, preloadFunction} from './utilities/suspense';
+export {Form} from './foundation/Form/Form.client';
