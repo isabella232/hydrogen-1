@@ -1,7 +1,7 @@
 import {NoStore} from '@shopify/hydrogen';
 import gql from 'graphql-tag';
 
-import {CUSTOMER_ACCESS_TOKEN_COOKIE_NAME} from '../../constants';
+import {setCustomerAccessToken} from '../../utilities/customer-access-token';
 import Layout from '../../components/Layout.server';
 import LoginForm from '../../components/LoginForm.client';
 
@@ -45,10 +45,12 @@ export async function api(request, {queryShop, session}) {
     data.customerAccessTokenCreate &&
     data.customerAccessTokenCreate.customerAccessToken !== null
   ) {
-    await session.set(
-      CUSTOMER_ACCESS_TOKEN_COOKIE_NAME,
-      data.customerAccessTokenCreate.customerAccessToken.accessToken,
-    );
+    await setCustomerAccessToken(session, {
+      accessToken:
+        data.customerAccessTokenCreate.customerAccessToken.accessToken,
+      expiresAt: data.customerAccessTokenCreate.customerAccessToken.expiresAt,
+      autoRenew: true,
+    });
 
     return new Response(null, {
       status: 200,

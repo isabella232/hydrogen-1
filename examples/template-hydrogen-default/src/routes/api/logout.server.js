@@ -1,7 +1,7 @@
-import {CUSTOMER_ACCESS_TOKEN_COOKIE_NAME} from '../../constants';
+import {removeCustomerAccessToken} from '../../utilities/customer-access-token';
 
 export async function api(request, {session}) {
-  await session.set(CUSTOMER_ACCESS_TOKEN_COOKIE_NAME, '');
+  await removeCustomerAccessToken(session);
 
   return new Response(null, {
     headers: {
