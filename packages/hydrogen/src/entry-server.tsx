@@ -28,6 +28,7 @@ import {
   getApiRouteFromURL,
   renderApiRoute,
   getApiRoutes,
+  RSCRequest,
 } from './utilities/apiRoutes';
 import {ServerStateProvider} from './foundation/ServerStateProvider';
 import {isBotUA} from './utilities/bot-ua';
@@ -148,6 +149,9 @@ export const renderHydrogen = (
                     JSON.stringify({
                       pathname: newUrl.pathname,
                       search: '',
+                      ...(apiResponse instanceof RSCRequest
+                        ? apiResponse.state
+                        : {}),
                     })
                   )}`,
                 {

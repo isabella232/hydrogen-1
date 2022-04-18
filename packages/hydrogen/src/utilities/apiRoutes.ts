@@ -184,8 +184,14 @@ export async function renderApiRoute(
       }
     }
   } catch (e) {
-    log.error(e);
-    response = new Response('Error processing: ' + request.url, {status: 500});
+    if (!(e instanceof Request) && !(e instanceof Response)) {
+      log.error(e);
+      response = new Response('Error processing: ' + request.url, {
+        status: 500,
+      });
+    } else {
+      response = e;
+    }
   }
 
   logServerResponse(
@@ -195,4 +201,13 @@ export async function renderApiRoute(
   );
 
   return response;
+}
+
+export class RSCRequest extends Request {
+  public state: Record<string, any>;
+
+  constructor(url: string, state: Record<string, any> = {}) {
+    super(url);
+    this.state = state;
+  }
 }

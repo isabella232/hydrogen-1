@@ -43,4 +43,5 @@ export {
 
 export {fetchSync} from './foundation/fetchSync/server/fetchSync';
 export {Form} from './foundation/Form/Form.client';
+export {RSCRequest} from './utilities/apiRoutes';
 export {useServerAnalytics} from './foundation/Analytics';
