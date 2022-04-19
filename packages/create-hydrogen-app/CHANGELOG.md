@@ -1,5 +1,41 @@
 # Changelog
 
+## 0.15.1
+
+### Patch Changes
+
+- [#929](https://github.com/Shopify/hydrogen/pull/929) [`f9e76eb7`](https://github.com/Shopify/hydrogen/commit/f9e76eb786b69dbbb3e47cfec2528cab82bbe370) Thanks [@cartogram](https://github.com/cartogram)! - Deprecate `@shopify/hydrogen-cli`. Use Shopify CLI (`@shopify/cli-hydrogen` instead.
+
+  The template now adds the `@shopify/cli` dependencies for the `yarn preview` command. To update your existing app:
+
+  To update your existing apps, install the Shopify & Hydrogen CLIs:
+
+  ```bash
+  yarn add -D @shopify/cli @shopify/cli-hydrogen
+  ```
+
+  And update the `preview` script in your `package.json`:
+
+  ```diff
+  -    "preview": "npx @shopify/hydrogen-cli@latest preview",
+  +    "preview": "shopify hydrogen preview",
+  ```
+
+* [#1089](https://github.com/Shopify/hydrogen/pull/1089) [`3c189665`](https://github.com/Shopify/hydrogen/commit/3c18966501633e10dfdcc2eb18c7cc75a8b086d6) Thanks [@cartogram](https://github.com/cartogram)! - Use Shopify CLI to start a local development server instead of `vite`.
+
+  To update your existing apps, install the Shopify & Hydrogen CLIs:
+
+  ```bash
+  yarn add -D @shopify/cli @shopify/cli-hydrogen
+  ```
+
+  And update the `dev` script in your `package.json`:
+
+  ```diff
+  -    "dev": "vite",
+  +    "dev": "shopify hydrogen dev",
+  ```
+
 ## 0.14.0
 
 ### Minor Changes
